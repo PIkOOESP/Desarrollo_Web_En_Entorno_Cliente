@@ -5,7 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 5</title>
     <script>
-        
+        // Asignamos la variable hora en 8 porque empezamos a contar las horas a partir de las 9
+        let hora = 8
+        document.write("<ul>");
+
+        for(let i = 0 ; i < 26 ; i++){
+            // Cuando la variable i es par, suma 1 a la variable hora y muestra el mensaje de la hora en punto
+            if(i % 2 == 0){
+                hora++;
+                document.write("<li>La hora es: " + hora + ":00</li>");
+            // Cuadno no, no suma 1 a la variable hora y muestra el mensaje con media hora
+            } else {
+                document.write("<li>La hora es: " + hora + ":30</li>");
+            }
+        }
+        document.write("</ul>");
     </script>
 </head>
 <body>

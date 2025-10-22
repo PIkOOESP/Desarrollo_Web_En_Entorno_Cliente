@@ -3,7 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio</title>
+    <title>Ejercicio 8</title>
+    <script>
+        let error = "";
+        do{
+            var presi = prompt(error + "¿Cuál fue el primer presidente de la democracia española?");
+            if(presi.toLowerCase() == "carlos"){
+                error = "Te faltan los apellidos. ";
+            } else if(presi.toLowerCase() == "carlos arias"){
+                error = "Te falta el segundo apellido. ";
+            } else if(presi.toLowerCase() == "carlos navarro"){
+                error = "Te falta el primer apellido. ";
+            } else if(presi.toLowerCase() == "arias"){
+                error = "Te falta el nombre y el segundo apellido. ";
+            } else if(presi.toLowerCase() == "navarro"){
+                error = "Te falta el nombre y el primer apellido. ";
+            } else if(presi.toLowerCase() == "arias navarro"){
+                error = "Te falta el nombre. ";
+            } else{
+                error = "ERROR. Inténtelo de nuevo. ";
+            }
+        }while(presi.toLowerCase() != "carlos arias navarro")
+    </script>
 </head>
 <body>
     

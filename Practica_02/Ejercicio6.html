@@ -3,7 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio</title>
+    <title>Ejercicio 6</title>
+    <script>
+        let hora = 8
+        let minutos = 0;
+        document.write("<ul>");
+
+        for(let i = 0 ; i < 145 ; i++){
+            if(i % 12 == 0){
+                hora++;
+                // Devolvemos minutos a 0 cada 12 vueltas
+                minutos = 0;
+                document.write("<li>La hora es: " + hora + ":00</li>");
+            } else {
+                minutos += 5;
+                if(minutos == 5){
+                    document.write("<li>La hora es: " + hora + ":05</li>");
+                } else {
+                    document.write("<li>La hora es: " + hora + ":" + minutos + "</li>");
+                }
+            }
+        }
+    </script>
 </head>
 <body>
     

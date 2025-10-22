@@ -3,7 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio</title>
+    <title>Ejercicio 9</title>
+    <script>
+        let respuesta = window.prompt("Introduce tu edad");
+
+        switch(respuesta){       
+            case 1:
+            case 2:
+                alert("Niño");
+                break;
+
+            case respuesta > 12 && respuesta <= 26:
+                alert("Joven");
+                break;
+            
+            case respuesta > 26 && respuesta <= 60:
+                alert("Adulto");
+                break;
+            
+            case respuesta > 60:
+                alert("Jubilado");
+                break;
+            
+            default:
+                alert("Respuesta invalida");
+                break;
+        }
+    </script>
 </head>
 <body>
     
