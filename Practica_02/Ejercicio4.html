@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <script>
+        // Pide al usuario un número
+        let respuesta = window.prompt("Introduce tu edad");
+
+        // Comprueba el valor y devuelve una alerta u otra
+        if(respuesta <0 ){
+            alert("Edad incorrecta");
+        } else if(respuesta >=0 && respuesta <= 12){
+            alert("Niño");
+        } else if(respuesta >12 && respuesta <=26){
+            alert("Joven");
+        } else if(respuesta >26 && respuesta <=60){
+            alert("Adulto");
+        } else {
+            alert("Jubilado");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
