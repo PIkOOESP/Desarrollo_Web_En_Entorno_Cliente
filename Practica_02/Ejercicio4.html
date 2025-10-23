@@ -9,7 +9,9 @@
         let respuesta = window.prompt("Introduce tu edad");
 
         // Comprueba el valor y devuelve una alerta u otra
-        if(respuesta <0 ){
+        if(isNaN(respuesta)){
+            alert("NaN");
+        } else if(respuesta <0 ){
             alert("Edad incorrecta");
         } else if(respuesta >=0 && respuesta <= 12){
             alert("Niño");
