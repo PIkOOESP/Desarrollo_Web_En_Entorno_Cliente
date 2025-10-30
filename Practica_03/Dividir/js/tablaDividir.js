@@ -8,7 +8,7 @@ const mostrarTabla = (event) => {
         tablaDividir += '<ul>';
 
         for (let i = 0; i <= 10; i++) {
-            tablaDividir += `<li>${numero} * ${i} = ${numero / i}</li>`;
+            tablaDividir += `<li>${numero} / ${i} = ${numero / i}</li>`;
         }
         tablaDividir += '</ul>';
         tabla.innerHTML = tablaDividir;
