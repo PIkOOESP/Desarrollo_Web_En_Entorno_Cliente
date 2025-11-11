@@ -8,7 +8,7 @@
         let fecha = new Date("June 24, 2026");
         let feche = new Date();
         tiempo = Math.round((fecha.getTime()-feche.getTime())/1000/60/60/24) + 1;
-        alert(tiempo);
+        document.write("Desde el " + feche.getDate() + "/" + feche.getMonth() + "/" + feche.getFullYear() + " faltan " + tiempo + " dias para el " + fecha.getDate() + "/" + fecha.getMonth() + "/" + fecha.getFullYear());
     </script>
 </head>
 <body>

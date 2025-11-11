@@ -5,12 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 3</title>
     <script>
-        fecha = new Date();
-        document.writeln(fecha.getDate() + "/" + fecha.getMonth() + "/" + fecha.getFullYear());
-        document.writeln(fecha.)
+        function mostrarfecha(valor){
+            texto = document.getElementById("fecha"); 
+
+            diasEs = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"];
+            diasEn = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturnday", "Sunday"];
+
+            mesesEs = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+            mesesEn = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+            fecha = new Date();
+            if(valor == 0){
+                texto.innerHTML = fecha.getDate() + "/" + fecha.getMonth() + "/" + fecha.getFullYear() + "<br>";
+            } else if (valor == 1) {
+                texto.innerHTML = diasEs[fecha.getDay()] + " " + fecha.getDate() + " de " + mesesEs[fecha.getMonth()] + " de  " + fecha.getFullYear() + "<br>";
+            } else
+                texto.innerHTML = diasEn[fecha.getDay()] + " " + fecha.getDate() + ", " + mesesEn[fecha.getMonth()] + " " + fecha.getFullYear() + "<br>";
+        }
     </script>
 </head>
 <body>
+    <form>
+        <p>Fecha de hoy:</p>
+        <input type="radio" name="fecha" id="corto" value = 0 onclick="mostrarfecha(value)">
+        <label for="Opciones">Fecha corta</label>
+        <input type="radio" name="fecha" id="largoes" value = 1 onclick="mostrarfecha(value)">
+        <label for="Opciones">Fecha en español</label>
+        <input type="radio" name="fecha" id="largoen" value = 2 onclick="mostrarfecha(value)">
+        <label for="Opciones">Fecha larga en ingles</label>
+    </form>
+    <p id="fecha"></p>
     
 </body>
 </html>
