@@ -1,11 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio </title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 5</title>
+        <script>
+            function mostrarform(valor){
+                let formulario = document.getElementById("formulario");
+                formulario.innerHTML = "<br>";
+
+                if (valor == 1){
+                    formulario.innerHTML += "<label for='base'>Base</label> <input type='number' id='base'> <br> <label for='exponente'>Exponente</label> <input type='number' id='exponente'> <br> <button onclick='calcular(1)'>Calcular</button>";
+                }
+
+                if(valor == 2){
+                    formulario.innerHTML += "<label for='numero'>Numero no negativo</label> <input type='number' id='numero'> <br> <button onclick='calcular(2)'>Calcular</button>";
+                }
+
+                if(valor == 3){
+                    formulario.innerHTML += "<label for='decimal'>Numero decimal</label> <input type='number' id='decimal'> <br> <button onclick='calcular(3)'>Calcular</button>";
+                }
+                
+                if(valor == 4){
+                    formulario.innerHTML += "<label for='angulo'>Angulo</label> <input type='number' id='angulo'> <br> <button onclick='calcular(4)'>Calcular</button>";
+                }
+            }
+
+            function calcular(valor){
+                let resultado = document.getElementById("resultado");
+                resultado.innerHTML = "";
+            
+                if (valor == 1){
+                    let base = document.getElementById("base").value;
+                    let exponente = document.getElementById("exponente").value;
+                    let potencia = Math.pow(base, exponente);
+                    resultado.innerHTML = "La potencia de "+ base + " elevado a " + exponente + " es " + potencia;
+                }
+
+                if(valor == 2){
+                    let numero = document.getElementById("numero").value;
+                    if(numero < 0){
+                        resultado.innerHTML = "El numero debe ser positivo";
+                    } else {
+                        let raiz = Math.sqrt(numero);
+                        resultado.innerHTML = "La raiz de " + numero + " es " + raiz;
+                    }
+                }
+
+                if(valor == 3){
+                    let decimal = document.getElementById("decimal").value;
+                    resultado.innerHTML = "Redondeo a la alta: " + Math.ceil(decimal) + "<br>Redondeo a la baja: " + Math.floor(decimal);
+                }
+
+                if(valor == 4){
+                    let angulo = document.getElementById("angulo").value;
+                    if(angulo < 0 || angulo > 360){
+                        resultado.innerHTML = "El angulo debe estar entre 0º y 360º";
+                    } else {
+                        let seno = Math.sin(angulo*Math.PI/180);
+                        let coseno = Math.cos(angulo*Math.PI/180);
+                        let tangente = Math.tan(angulo*Math.PI/180);
+                        resultado.innerHTML = "Seno: " + seno + "<br>Coseno: " + coseno + "<br>Tangente: " + tangente;
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <p>Calculadora:</p>
+
+        <input type="radio" name="calculadora" id="potencia" value=1 onclick="mostrarform(value)">
+        <label for="potencia">Potencia</label>
+
+        <input type="radio" name="calculadora" id="raiz" value=2 onclick="mostrarform(value)">
+        <label for="raiz">Raiz</label>
+
+        <input type="radio" name="calculadora" id="redondeo" value=3 onclick="mostrarform(value)">
+        <label for="redondeo">Redondeo</label>
+
+        <input type="radio" name="calculadora" id="trigonometria" value="4" onclick="mostrarform(value)">
+        <label for="trigonometria">Trigonometria</label>
+
+        <div id="formulario">
+
+        </div>
+        <p id="resultado"></p>
+    </body>
 </html>

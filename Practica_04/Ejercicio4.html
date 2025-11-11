@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio </title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 4</title>
+        <script>
+            function mostrarhora(valor){
+                let texto = document.getElementById("hora");
+                let hora = new Date();
+                if(valor == 0){
+                    texto.innerHTML = hora.getHours() + ":" + hora.getMinutes() + ":" + hora.getSeconds() ;
+                } else {
+                    if(hora.getHours()-12 < 0){
+                        texto.innerHTML = hora.getHours() + ":" + hora.getMinutes() + ":" + hora.getSeconds() + "AM";
+                    } else {
+                        texto.innerHTML = hora.getHours() + ":" + hora.getMinutes() + ":" + hora.getSeconds() + "PM";
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <p>Hora:</p>
+            
+            <input type="radio" name="hora" id="largo" value = 0 onclick="mostrarhora(value)">
+            <label for="largo">hora larga</label>
+
+            <input type="radio" name="hora" id="AM/PM" value = 1 onclick="mostrarhora(value)">
+            <label for="AM/PM">Hora AM/PM</label>
+        </form>
+        <p id="hora"></p>
+        
+    </body>
 </html>

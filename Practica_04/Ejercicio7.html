@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio </title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 7</title>
+        <script>
+            function mostrarvalores(){
+                let resultado = document.getElementById("resultado");
+                let numero = new Number(document.getElementById("numero").value);
+                let exponencial = numero.toExponential();
+                let decimales = parseFloat(numero).toFixed(4);
+                let binario = numero.toString(2);
+                let octal = numero.toString(8);
+                let hexa = numero.toString(16);
+
+                resultado.innerHTML = "Exponencial: " + exponencial +"<br>4 Decimales: " + decimales + "<br>Binario: " + binario + "<br>Octal: " + octal + "<br>Hexadecimal: " + hexa; 
+            }
+        </script>
+    </head>
+    <body>
+        <label for="numero">Radio</label>
+        <input type="number" name="numero" id="numero">
+        <button onclick="mostrarvalores()">Mostrar</button>
+        <p id="resultado"></p>
+    </body>
 </html>

@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio </title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 6</title>
+        <script>
+            function mostrarvalores(){
+                let resultado = document.getElementById("resultado");
+                let radio = document.getElementById("radio").value;
+                let diametro = radio * 2;
+                let perimetro = 2 * Math.PI * radio;
+                let area = Math.PI * Math.pow(radio, 2);
+                let areaEs = area * 4;
+                let volumen = (3/4) * Math.PI * Math.pow(radio, 3);
+
+                resultado.innerHTML = "Radio: " + radio + " cm<br>Diametro: " + diametro + " cm<br>Perimetro del circulo: " + perimetro + " cm<br>Area del circulo: " + area + " cm2<br>Area de la esfera: " + areaEs + " cm2<br>Volumen de la esfera: " + volumen + " cm3";
+            }
+        </script>
+    </head>
+    <body>
+        <label for="radio">Radio</label>
+        <input type="number" name="radio" id="radio">
+        <button onclick="mostrarvalores()">Mostrar</button>
+        <p id="resultado"></p>
+    </body>
 </html>

@@ -6,15 +6,15 @@
     <title>Ejercicio 3</title>
     <script>
         function mostrarfecha(valor){
-            texto = document.getElementById("fecha"); 
+            let texto = document.getElementById("fecha"); 
 
-            diasEs = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"];
-            diasEn = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturnday", "Sunday"];
+            const diasEs = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"];
+            const diasEn = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturnday", "Sunday"];
 
-            mesesEs = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-            mesesEn = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const mesesEs = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+            const mesesEn = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-            fecha = new Date();
+            let fecha = new Date();
             if(valor == 0){
                 texto.innerHTML = fecha.getDate() + "/" + fecha.getMonth() + "/" + fecha.getFullYear() + "<br>";
             } else if (valor == 1) {
