@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <script>
+        let dia = prompt("Introduce el dia de tu cumpleaños");
+        let mes = prompt("Introduce el mes de tu cumpleaños");
+        
+        mes = parseInt(mes);
+        dia = parseInt(dia);
+
+        let contador = 0;
+        for (let i = 2025 ; i <= 2100 ; i++){
+            let fecha = new Date(i,(mes-1),dia);
+            if(fecha.getDay() == 6){
+                contador++;
+            } 
+        }
+
+        alert("Hay " + contador + " que son domingos");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
