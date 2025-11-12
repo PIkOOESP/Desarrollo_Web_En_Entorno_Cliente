@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio </title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 8</title>
+        <script>
+            function funcion(){
+                let nombre = document.getElementById("nombre").value;
+                let resultado = document.getElementById("resultado");
+
+                let opcion1 = nombre.trim().normalize("NFD").replaceAll(" ", "");
+                let opcion2a = nombre.toUpperCase();
+                let opcion2b = nombre.toLowerCase();
+                let opcion3 = nombre.split(" ");
+                let nombreUser = opcion3[0].charAt(0) + opcion3[1] + opcion3[2].charAt(0);
+                let nombreUser2 = opcion3[0].charAt(0) + opcion3[0].charAt(1) + opcion3[0].charAt(2) + opcion3[1].charAt(0) + opcion3[1].charAt(1) + opcion3[1].charAt(2) + opcion3[2].charAt(0) + opcion3[2].charAt(1) + opcion3[2].charAt(2);
+
+                resultado.innerHTML ="1." + opcion1 + "<br><br>2a." + opcion2a + "<br><br>2b." + opcion2b + "<br><br>3.";
+
+                for (let i = 0 ; i < opcion3.length ; i++){
+                    resultado.innerHTML += opcion3[i] + "<br>";
+                }
+
+                resultado.innerHTML +="<br>4." + nombreUser + "<br><br>5." + nombreUser2 ;
+            }   
+        </script>
+    </head>
+    <body>
+        <label for="nombre">Nombre y apellidos</label>
+        <input type="text" name="nombre" id="nombre">
+
+        <button onclick="funcion()">Enviar</button>
+
+        <p id ="resultado"></p>
+    </body>
 </html>
