@@ -9,7 +9,7 @@
                 let nombre = document.getElementById("nombre").value;
                 let resultado = document.getElementById("resultado");
 
-                let opcion1 = nombre.trim().normalize("NFD").replaceAll(" ", "");
+                let opcion1 = nombre.trim().replaceAll(" ", "");
                 let opcion2a = nombre.toUpperCase();
                 let opcion2b = nombre.toLowerCase();
                 let opcion3 = nombre.split(" ");

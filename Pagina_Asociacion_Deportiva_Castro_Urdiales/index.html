@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asociacion Deportiva Castro Urdiales</title>
+    <script>
+        calendario = document.getElementById("calendario");
+    </script>
+    <script src="js/validarContrasena.js"></script>
+    <script>
+        setTimeout(function(){
+            alert("Bienvenido");
+        }, 10000);
+    </script>
+   
+</head>
+<body>
+    <header>
+        <div class="header">    
+            <div class="calendario">
+
+            </div>
+        </div>  
+    </header>
+    
+    <main>
+        <input type="password" name="contra" id="contra" placeholder="Contraseña">
+        <button onclick="validarcontra()">Enviar</button>
+        <p id="validacion"></p>
+    </main>
+    
+    <footer>
+        <div class="footer">
+            <p>Asociacion Deportiva Castro Urdiales</p>
+            <p>Web desarrollada por: Miguel Angel Santiago Barriga</p>
+            <a href="avisolegal.html">Aviso Legal</a>
+        </div>
+    </footer>
+</body>
+</html>
