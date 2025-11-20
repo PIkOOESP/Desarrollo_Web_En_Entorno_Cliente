@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asociacion Deportiva Castro Urdiales</title>
-    <script>
-        calendario = document.getElementById("calendario");
-    </script>
     <script src="js/validarContrasena.js"></script>
     <script>
         setTimeout(function(){
@@ -18,8 +15,8 @@
 <body>
     <header>
         <div class="header">    
-            <div class="calendario">
-
+            <div  class ="calendario" >
+                <p id="calendario"></p>
             </div>
         </div>  
     </header>
@@ -37,5 +34,10 @@
             <a href="avisolegal.html">Aviso Legal</a>
         </div>
     </footer>
+    <script>
+        let calendario = document.getElementById("calendario");
+        let dia = new Date();
+        calendario.innerHTML = dia.getDate() + "/" + dia.getMonth() + "/" + dia.getFullYear() ;
+    </script>
 </body>
 </html>

@@ -15,7 +15,7 @@
             const mesesEn = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
             let fecha = new Date();
-            if(valor == 0){
+            if(valor == 0){ 
                 texto.innerHTML = fecha.getDate() + "/" + fecha.getMonth() + "/" + fecha.getFullYear() + "<br>";
             } else if (valor == 1) {
                 texto.innerHTML = diasEs[fecha.getDay()] + " " + fecha.getDate() + " de " + mesesEs[fecha.getMonth()] + " de  " + fecha.getFullYear() + "<br>";
