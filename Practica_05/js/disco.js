@@ -1,22 +1,13 @@
 //Ejercicio 4
 
 class Disco {
-    constructor(){
-        this.nombre = "";
-        this.ano = "";
-        this.grupo = "";
-        this.tipo = "";
-        this.localizacion = 0;
-        prestado = false;
-    }
-
     constructor(nombre, grupo, ano, tipo, localizacion) {
         this.nombre = nombre;
         this.ano = ano;
         this.grupo = grupo;
         this.tipo = tipo;
         this.localizacion = localizacion;
-        prestado = false;
+        this.prestado = false;
     }
 
     setLocalizacion(localizacion) {
@@ -27,9 +18,13 @@ class Disco {
         this.prestado = prestado;
     }
 
+    getNombre(){
+        return this.nombre;
+    }
+
     mostrarInfo(){
         let doc = document.getElementById("info");
-        doc.innerHTML = "Nombre: "+ this.nombre + "\nAño de publicación: " + this.ano + "\nGrupo: " + this.grupo + "\nTipo de música: " + this.tipo + "\nLocalizacion: " + this.localizacion + "\nPrestado: ";
+        doc.innerHTML += "Nombre: "+ this.nombre + "<br>Año de publicación: " + this.ano + "<br>Grupo: " + this.grupo + "<br>Tipo de música: " + this.tipo + "<br>Localizacion: " + this.localizacion + "<br>Prestado: ";
         if(this.prestado ==  true){
             doc.innerHTML += "si";
         } else {
