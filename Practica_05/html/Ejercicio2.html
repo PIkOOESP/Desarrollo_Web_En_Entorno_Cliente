@@ -4,9 +4,43 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ejercicio 2</title>
-        <script src="../js/Ejercicio2.js"></script>
+        <link rel="stylesheet" href="../estilos.css">
+        <!--En vez de paises esta hecho de meses pero el ejemplo es el mismo-->
+        
+        
     </head>
     <body>
+        <button onclick="mostrarNum(meses)">Mostrar numero de elementos</button>
+        <button onclick="mostrarElem(meses)">Mostrar elementos</button>
+        <button onclick="mostrarElemRev(meses)">Mostrar elementos al revés</button>
+        <button onclick="mostrarElemOrd(meses)">Mostrar elementos ordenados alfabeticamente</button>
+        <button onclick="anadirIni(meses,'ofiuco')">Añadir ofiuco al principio</button>
+        <button onclick="anadirEnd(meses,'ofiuco')">Añadir ofiuco al final</button>
+        <button onclick="borrarIni(meses)">Borrar el primer elemento</button>
+        <button onclick="borrarEnd(meses)">Borrar el ultimo elemento</button>
+        <button onclick="mostrarElemPos(meses,1)">Muestra el segundo elemento</button>
+        <button onclick="mostrarInter(meses,0,2)">Mostrar un intervalo</button>
+        <button onclick="main()">Activar prompt de nuevo</button>
         <p id="mostrar"></p>
+        <script src="../js/Ejercicio2.js"></script>
+        <script src="../js/Ejercicio3.js"></script>
+        <script>
+            let meses =[
+                "enero",
+                "febrero",
+                "marzo",
+                "abril",
+                "mayo",
+                "junio",
+                "julio",
+                "agosto",
+                "septiembre",
+                "octubre",
+                "noviembre",
+                "diciembre"
+            ] 
+
+            main()
+        </script>
     </body>
 </html>

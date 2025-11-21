@@ -1,11 +1,11 @@
 const most = document.getElementById("mostrar");
 
 function mostrarNum(arr){
-    most.innerHTML ="El numero de elementos del array es:" + arr.length;
+    most.innerHTML += "<br><br>El numero de elementos del array es: " + arr.length;
 }
 
 function mostrarElem(arr){
-    most.innerHTML = "<ul>";
+    most.innerHTML +="<br><br><ul>";
 
     for (let i = 0 ; i < arr.length ; i++){
         most.innerHTML += "<li>" + arr[i] + "</li>";
@@ -15,9 +15,10 @@ function mostrarElem(arr){
 }
 
 function mostrarElemRev(arr){
-    newarr = arr.reverse();
+    newarr = arr.slice();
+    newarr.reverse();
 
-    most.innerHTML = "<ul>";
+    most.innerHTML +="<br><br><ul>";
 
     for (let i = 0 ; i < newarr.length ; i++){
         most.innerHTML += "<li>" + newarr[i] + "</li>";
@@ -27,9 +28,10 @@ function mostrarElemRev(arr){
 }
 
 function mostrarElemOrd(arr){
-    newarr = arr.sort();
+    newarr = arr.slice();
+    newarr.sort();
 
-    most.innerHTML = "<ul>";
+    most.innerHTML +="<br><br><ul>";
 
     for (let i = 0 ; i < newarr.length ; i++){
         most.innerHTML += "<li>" + newarr[i] + "</li>";
@@ -47,17 +49,33 @@ function anadirEnd(arr, elem){
 }
 
 function borrarIni(arr){
-    most.innerHTML = "Elemento eliminado: " + arr.shift();
+    most.innerHTML += "<br><br>Elemento eliminado: " + arr.shift();
 }
 
 function borrarEnd(arr){
-    most.innerHTML = "Elemento eliminado: " + arr.pop();
+    most.innerHTML += "<br><br>Elemento eliminado: " + arr.pop();
 }
 
 function mostrarElemPos(arr,ind){
-    if(ind >= arr.length || ind < 0){
-        most.innerHTML = "El indice buscado fuera de rango";
-    } else {
-        most.innerHTML = "Elemento en el indice " + ind + ": " + arr[ind];
+    most.innerHTML += "<br><br>Elemento en el indice " + ind + ": " + arr[ind];
+}
+
+function mostrarPosElem(arr,nombre){
+    for(let i = 0 ; i < arr.length ; i++){
+        if(arr[i] == nombre){
+            most.innerHTML += "<br><br>El elemento " + nombre + " está en el indice " + i;
+            return
+        }
     }
+    most.innerHTML+="<br><br>Elemento no encontrado";
+}
+
+function mostrarInter(arr,ind1,ind2){   
+    newarr = arr.slice(ind1,ind2+1);
+    most.innerHTML +="<br><br><ul>";
+
+    for (let i = 0 ; i < newarr.length ; i++){
+        most.innerHTML += "<li>" + newarr[i] + "</li>";
+    }
+    most.innerHTML +="</ul>"
 }
