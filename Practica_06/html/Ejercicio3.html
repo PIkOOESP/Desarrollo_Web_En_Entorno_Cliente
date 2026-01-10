@@ -3,35 +3,38 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="estilos.css">
+        <link rel="stylesheet" href="../estilos.css">
         <title>Ejercicio 3</title>
     </head>
     <body>
-        <input type='text' id='nombre' placeholder='Nombre'>
+        <form id="formulario">
+            <input type='text' id='nombre' placeholder='Nombre'>
 
-        <br>
+            <br>
 
-        <input type='number' id='ano' placeholder='Año de lanzamiento'>
+            <input type='number' id='ano' placeholder='Año de lanzamiento'>
 
-        <br>
+            <br>
 
-        <input type='text' id='grupo' placeholder='Grupo'>
+            <input type='text' id='grupo' placeholder='Grupo'>
 
-        <br>
+            <br>
 
-        <select name="tipo" id="tipo">
-            <option value="rock">Rock</option>
-            <option value="pop">Pop</option>
-            <option value="indie">Indie</option>
-            <option value="punk">Punk</option>
-        </select>
+            <select name="tipo" id="tipo">
+                <option value="rock">Rock</option>
+                <option value="pop">Pop</option>
+                <option value="indie">Indie</option>
+                <option value="punk">Punk</option>
+            </select>
 
-        <br>
+            <br>
 
-        <input type='number' id='localizacion' placeholder='Numero de estantería'>
+            <input type='number' id='localizacion' placeholder='Numero de estantería'>
 
-        <br>
-        
-        <button onclick='validarAnadir()'>Enviar</button>
+            <br>
+            
+            <button>Enviar</button>
+        </form>
+        <script src="../js/Ejercicio3.js"></script>
     </body>
 </html>

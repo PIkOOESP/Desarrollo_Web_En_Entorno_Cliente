@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../estilos.css">
+        <title>Ejercicio 4</title>
+    </head>
+    <body>
+        <form id="formulario" action="#">
+            <label for="created">Fecha de creacion</label>
+            <input type="date" name="created" id="created">
+
+            <br>
+
+            <label for="cocinero">Cocinero</label>
+            <input type="text" name="cocinero" id="cocinero">
+
+            <br>
+
+            <label for="destinatario">Destinatario</label>
+            <input type="text" name="destinatario" id="destinatario">
+
+            <br>
+
+            <label for="gramos">Gramos</label>
+            <input type="text" name="gramos" id="gramos">
+
+            <br>
+
+            <label for="composicion">Composicion</label>
+            <input type="text" name="composicion" id="composicion">
+
+            <br>
+
+            <label for="cuenta">Numero de cuenta</label>
+            <input type="text" name="cuenta" id="cuenta">
+            <p id="cuentaLimpia"></p>
+
+            <br>
+
+            <button>Enviar</button>
+        </form>
+        
+        <p id="galletica"></p>
+        <button onclick="lavarCookie()">Borrar</button>
+
+        <script type="text/javascript" src="../js/cookies.js"></script>
+        <script type="text/javascript" src="../js/Ejercicio4.js"></script>
+    </body>
+</html>
