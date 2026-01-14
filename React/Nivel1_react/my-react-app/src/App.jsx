@@ -1,11 +1,25 @@
 function App() {
-    return <>
-        <h1>Realmente puedo escribir aqui lo que quiera</h1>
-        <h2>La cucaracha, la cucaracha ya no puede caminar, por que no tiene, porque le faltan las patitas de atras</h2>
-        <br />
-        {/*Un dos tres, un pasito pa'lante maria, un dos tres, un pasito pa'tras*/}
-        <ParentComponent/>
-    </>
+   const users = [
+        { id: 1, name: 'Iker', role: 'Team Tester' },
+        { id: 2, name: 'Antonio', role: 'Master' },
+        { id: 3, name: 'Fran', role: 'Chair Tester' },
+        { id: 4, name: 'Estefania', role: 'Animal Tester'}
+    ]
+
+    return (
+        <>
+        <p>Lista de usuarios activos:</p>
+        <ul>
+            {users.map(function (user) {
+                return (
+                    <li key={user.id} className={user.role}>
+                    {user.name} — {user.role}
+                    </li>
+                )
+            })}
+        </ul>
+        </>
+    )
 }
 
 function ParentComponent(){
