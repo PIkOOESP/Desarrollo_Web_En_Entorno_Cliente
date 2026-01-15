@@ -1,33 +1,22 @@
-function App() {
-   const users = [
-        { id: 1, name: 'Iker', role: 'Team Tester' },
-        { id: 2, name: 'Antonio', role: 'Master' },
-        { id: 3, name: 'Fran', role: 'Chair Tester' },
-        { id: 4, name: 'Estefania', role: 'Animal Tester'}
-    ]
+import { useState } from "react"
 
-    return (
-        <>
-        <p>Lista de usuarios activos:</p>
-        <ul>
-            {users.map(function (user) {
-                return (
-                    <li key={user.id} className={user.role}>
-                    {user.name} — {user.role}
-                    </li>
-                )
-            })}
-        </ul>
-        </>
-    )
+function App() {
+   return <ParentComponent/>
 }
 
 function ParentComponent(){
-    return <>
-        <UserComponent/>
-        <ProfileComponent/>
-        <FeedComponent/>
-    </>
+    const [name, setName] = useState("Dani")
+
+   return <HijitoComponent name = {name} setName ={setName}/>
+}
+
+function HijitoComponent(props){
+    return(<> 
+        <p>Unas pipsas {props.name}</p>
+        <button onClick={() => props.setName("Klara")}>Cambiar</button>
+        <button onClick={() => props.setName("Carlos")}>Cambiar.Segunda Parte</button>
+        </>
+    )
 }
 
 function UserComponent(){
