@@ -1,11 +1,18 @@
 import { useState } from 'react'
+import styles from "./app.module.css"
 
 function App() {
   return (
-    <>
-      <MostrarTexto />
-    </>
-  )
+    <div className='p-6'>
+      <h1 className='text-3x1 font-bold'>CSS en React</h1>
+      <p className='mt-2 text-sm opacity-80'>
+        Estilos con clases de utilidad, como bootstrap
+      </p>
+      <button className='mt-4 px-4 py-2 text-white bg-blue-500 rounded hover:bg-green-600 transition-colors duration-300'>
+        Suscribirme
+      </button>
+    </div>
+  );
 }
 
 function MostrarTexto() {

@@ -1,0 +1,15 @@
+.paragraph-text{
+    font-size: 50px;
+    color: chocolate;
+}
+
+.paragraph-text:hover{
+    font-size: 70px;
+}
+
+@media (max-width:750px){
+    .paragraph-text{
+        font-size: 200px;
+        color: blue;
+    }
+}
