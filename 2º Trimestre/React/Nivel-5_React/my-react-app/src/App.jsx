@@ -1,29 +1,61 @@
 import { useState } from 'react'
 
 function App() {
-  const [user, setUser] = useState(null)
-  const [newEmails, setNewEmails] = useState(0)
-
-  const button = user
-  ? <button onClick={() => setUser(null)}>Logout</button>
-  : <button onClick={() => setUser({ name : 'Klara'
-  })}>Login</button>
-
   return (
     <>
-    <h1>Nivel 5: Renderizado condicional</h1>
-    {button}
+      <MostrarTexto />
+    </>
+  )
+}
 
-    {user ? <p>Bienvenido, {user.name}.</p> : <p>Inicia sesión para continuar.</p>}
+function MostrarTexto() {
+  const [visibilidad, setVisibilidad] = useState(true)
 
-    <hr />
+  const toggleVisibilidad = () =>{
+    setVisibilidad(!visibilidad)
+  } 
 
-    <button onClick={() => setNewEmails((n) => n + 1)}>+1 email</button>
-    <button onClick={() => setNewEmails(0)}>Reset</button>
+  return(
+    <>
+      {visibilidad && <p>Texto a esconder (Perdon por la poca creatividad, me da vueltas la cabeza) <Contador /></p>}
 
-    {newEmails > 0 && (
-    <h2><hr />Tienes {newEmails} correos nuevos.</h2>
-    )}
+      <button onClick={toggleVisibilidad}>{visibilidad ? "Esconder" : "Enseñar"}</button>
+    </>
+  )
+}
+
+function Contador(){
+  let [numero, setNumero] = useState(0)
+
+  const sumarNumero = () =>{
+    setNumero(++numero)
+  }
+
+  const restarNumero = () =>{
+    numero == 0 ? '' : setNumero(--numero)
+  }
+
+  return(
+    <>
+      <br />
+      <p>Contador:{numero}</p>
+      <p>LLega a 5 para continuar</p>
+
+      <button onClick={sumarNumero}>+1</button>
+      <button onClick={restarNumero}>-1</button>
+
+      {numero >= 5 && <ModoText />}
+    </>
+  )
+}
+
+function ModoText(){
+  const [texto, setTexto] = useState('')
+
+  return(
+    <>
+      <p>Modo: {texto||"No hay modo"}</p>
+      <input type="text" placeholder='Escribe aqui tu modo' value={texto} onChange={(r) => setTexto(r.target.value)} />
     </>
   )
 }
